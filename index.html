@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spotting Your Pattern · Self Trust Club</title>
+<meta name="description" content="A free, fillable reflection guide to help you notice a pattern that keeps showing up, and trace it back to where it began.">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --primary: #93b1f5;
+  --secondary: #6697e8;
+  --accent: #333333;
+  --bg: #f7f2e6;
+  --bg2: #f0ebe0;
+  --text: #2a2a2a;
+  --text-light: #6b6b6b;
+  --white: #ffffff;
+  --border: rgba(51,51,51,0.12);
+  --radius: 2px;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  font-weight: 300;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 17px;
+  line-height: 1.65;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+.eyebrow {
+  font-size: 0.72rem; font-weight: 500;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--secondary);
+}
+h1, h2, h3 { font-family: var(--font-display); font-weight: 300; line-height: 1.1; }
+h1 { font-size: clamp(2.8rem, 7vw, 4.6rem); }
+h2 { font-size: clamp(2rem, 5vw, 3rem); }
+h3 { font-size: 1.6rem; }
+em { color: var(--secondary); font-style: italic; }
+
+.btn {
+  display: inline-block;
+  background: var(--secondary); color: var(--white);
+  text-decoration: none;
+  font-size: 0.8rem; font-weight: 500;
+  letter-spacing: 0.16em; text-transform: uppercase;
+  padding: 18px 34px; border-radius: var(--radius);
+  transition: background 0.2s, transform 0.2s;
+}
+.btn:hover { background: #4f82da; transform: translateY(-1px); }
+.btn-ghost {
+  background: transparent; color: var(--accent);
+  border: 1px solid var(--accent);
+}
+.btn-ghost:hover { background: var(--accent); color: var(--white); }
+.small-note { font-size: 0.85rem; color: var(--text-light); margin-top: 14px; }
+
+/* Nav */
+nav { padding: 22px 0; border-bottom: 1px solid var(--border); }
+nav .wrap { display: flex; align-items: center; justify-content: space-between; }
+nav .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+nav .brand img { width: 40px; height: 40px; }
+nav .brand span {
+  font-family: var(--font-display); font-size: 1.15rem;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent);
+}
+nav .back {
+  font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--text-light); text-decoration: none;
+}
+nav .back:hover { color: var(--secondary); }
+
+/* Hero */
+.hero { padding: 90px 0 100px; }
+.hero .wrap { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: center; }
+.hero h1 { margin: 18px 0 22px; }
+.hero p.lead { font-size: 1.15rem; color: var(--text-light); max-width: 30em; margin-bottom: 34px; }
+.cover-stack { position: relative; max-width: 380px; margin-left: auto; }
+.cover-stack img {
+  border-radius: var(--radius);
+  box-shadow: 0 20px 50px rgba(51,51,51,0.12);
+}
+.cover-stack .back-page {
+  position: absolute; top: 28px; left: -46px; width: 88%;
+  transform: rotate(-5deg); opacity: 0.95;
+}
+.cover-stack .front-page { position: relative; transform: rotate(2deg); }
+
+/* Familiar */
+.familiar { background: var(--bg2); padding: 100px 0; }
+.familiar h2 { text-align: center; margin: 14px 0 56px; }
+.familiar .eyebrow { text-align: center; display: block; }
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.card {
+  background: var(--bg); padding: 36px 30px;
+  border-radius: var(--radius); border: 1px solid var(--border);
+}
+.card .label { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-light); }
+.card blockquote {
+  font-family: var(--font-display); font-style: italic; font-weight: 300;
+  font-size: 1.55rem; line-height: 1.25; margin-top: 14px;
+}
+.familiar .after {
+  text-align: center; max-width: 34em; margin: 56px auto 0;
+  color: var(--text-light);
+}
+
+/* Inside */
+.inside { padding: 100px 0; }
+.inside .wrap { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 72px; align-items: start; }
+.inside h2 { margin: 14px 0 20px; }
+.inside .intro { color: var(--text-light); }
+.inside .preview { margin-top: 40px; max-width: 300px; box-shadow: 0 14px 40px rgba(51,51,51,0.1); border-radius: var(--radius); }
+.steps { list-style: none; }
+.steps li {
+  display: grid; grid-template-columns: 64px 1fr; gap: 8px;
+  padding: 28px 0; border-top: 1px solid var(--border);
+}
+.steps li:last-child { border-bottom: 1px solid var(--border); }
+.steps .num { font-family: var(--font-display); font-style: italic; font-size: 1.8rem; color: var(--secondary); line-height: 1; }
+.steps h3 { margin-bottom: 6px; }
+.steps p { color: var(--text-light); }
+
+/* Download band */
+.band { background: var(--primary); color: var(--white); padding: 100px 0; text-align: center; position: relative; overflow: hidden; }
+.band .sun { width: 110px; margin: 0 auto 28px; opacity: 0.45; }
+.band h2 { margin-bottom: 18px; }
+.band p { max-width: 32em; margin: 0 auto 36px; opacity: 0.95; }
+.band .btn { background: var(--white); color: var(--secondary); }
+.band .btn:hover { background: var(--bg); }
+.band .small-note { color: var(--white); opacity: 0.85; }
+
+/* Next step */
+.next { padding: 100px 0; }
+.next .wrap { max-width: 760px; text-align: center; }
+.next h2 { margin: 14px 0 22px; }
+.next p { color: var(--text-light); margin-bottom: 18px; }
+.next .btn { margin-top: 18px; }
+
+footer { border-top: 1px solid var(--border); padding: 32px 0; font-size: 0.8rem; color: var(--text-light); }
+footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer a { text-decoration: none; }
+footer a:hover { color: var(--secondary); }
+
+@media (max-width: 820px) {
+  body { font-size: 16px; }
+  .wrap { padding: 0 16px; }
+  .hero { padding: 56px 0 72px; }
+  .hero .wrap, .inside .wrap { grid-template-columns: 1fr; gap: 48px; }
+  .cover-stack { margin: 0 auto; max-width: 300px; }
+  .cover-stack .back-page { left: -24px; }
+  .cards { grid-template-columns: 1fr; }
+  .familiar, .inside, .band, .next { padding: 72px 0; }
+  .inside .preview { display: none; }
+  nav .brand span { display: none; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="https://heddavknight.github.io/Self-Trust-Club/">
+      <img src="logo.png" alt="Self Trust Club logo">
+      <span>Self Trust Club</span>
+    </a>
+    <a class="back" href="https://heddavknight.github.io/Self-Trust-Club/">Visit the site</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Free reflection guide</span>
+      <h1>Spotting your <em>pattern</em></h1>
+      <p class="lead">There's something you keep thinking, doing or believing that doesn't feel like you, but it keeps happening anyway. This guide helps you notice it, name it, and gently trace it back to where it began.</p>
+      <a class="btn" href="spotting-your-pattern.pdf" download>Download the free guide</a>
+      <p class="small-note">Fillable PDF · 7 pages · Type straight into it</p>
+    </div>
+    <div class="cover-stack">
+      <img class="back-page" src="inside.png" alt="" aria-hidden="true">
+      <img class="front-page" src="cover.png" alt="Cover of the Spotting Your Pattern guide">
+    </div>
+  </div>
+</header>
+
+<section class="familiar">
+  <div class="wrap">
+    <span class="eyebrow">Sound familiar?</span>
+    <h2>The things that <em>keep</em> happening</h2>
+    <div class="cards">
+      <div class="card">
+        <span class="label">A thought</span>
+        <blockquote>"Who am I to do this? Someone else could do it better."</blockquote>
+      </div>
+      <div class="card">
+        <span class="label">Something you do</span>
+        <blockquote>Saying yes when everything in you wanted to say no.</blockquote>
+      </div>
+      <div class="card">
+        <span class="label">A belief</span>
+        <blockquote>"I have to earn my rest. I have to earn being liked."</blockquote>
+      </div>
+    </div>
+    <p class="after">These patterns aren't flaws. Most of them were learned for a good reason, often a long time ago. But what once protected you can start holding you back. And you can't change what you haven't noticed yet.</p>
+  </div>
+</section>
+
+<section class="inside">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">What's inside</span>
+      <h2>Four parts, <em>twelve</em> questions</h2>
+      <p class="intro">Find a quiet moment and a cup of tea. Write the first thing that comes up. There are no right answers here, only honest ones.</p>
+      <img class="preview" src="inside.png" alt="A page from the guide with questions and answer boxes">
+    </div>
+    <ol class="steps">
+      <li>
+        <span class="num">01</span>
+        <div>
+          <h3>Name it</h3>
+          <p>Put words to the pattern. When does it show up, and what do you feel just before it happens?</p>
+        </div>
+      </li>
+      <li>
+        <span class="num">02</span>
+        <div>
+          <h3>Get curious</h3>
+          <p>Notice what you tell yourself in the moment, what it's costing you, and what it might be trying to protect.</p>
+        </div>
+      </li>
+      <li>
+        <span class="num">03</span>
+        <div>
+          <h3>Where it began</h3>
+          <p>Trace it back. The first time you remember it, who you learned it from, and how it helped you back then.</p>
+        </div>
+      </li>
+      <li>
+        <span class="num">04</span>
+        <div>
+          <h3>Come back to yourself</h3>
+          <p>Ask whose voice it really is, and imagine what you'd think, do or believe if it were gone.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <img class="sun" src="sun.svg" alt="" aria-hidden="true">
+    <h2>Noticing is the first step</h2>
+    <p>Most people never pause long enough to see what's running underneath. This guide gives you the space to do exactly that.</p>
+    <a class="btn" href="spotting-your-pattern.pdf" download>Download the free guide</a>
+    <p class="small-note">Open it in Preview, Adobe Reader or your browser to type into it.</p>
+  </div>
+</section>
+
+<section class="next">
+  <div class="wrap">
+    <span class="eyebrow">When you're ready for more</span>
+    <h2>Seeing it is one thing. <em>Shifting</em> it is another.</h2>
+    <p>I'm Hedda, mindset coach, NLP practitioner and founder of The Self Trust Club. In 1-on-1 coaching sessions, we work directly with the subconscious: we find what your pattern has been trying to do for you, honour it, and create a new response that fits who you are now.</p>
+    <p>You don't have to figure it all out on your own.</p>
+    <a class="btn btn-ghost" href="https://heddavknight.github.io/Self-Trust-Club/">Work with me</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Self Trust Club</span>
+    <span>
+      <a href="mailto:selftrustclub@outlook.com">selftrustclub@outlook.com</a>
+      &nbsp;·&nbsp;
+      <a href="https://www.instagram.com/trustinghedda/">@trustinghedda</a>
+    </span>
+  </div>
+</footer>
+
+</body>
+</html>
